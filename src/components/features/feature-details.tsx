@@ -1,8 +1,8 @@
-import type { Feature } from "@/components/features/features";
+import { features } from "@/components/features/features";
 import { cn } from "@/lib/utils";
 
 type FeatureDetailsProps = {
-  feature: Feature;
+  feature: (typeof features)[number];
   isActive: boolean;
 };
 

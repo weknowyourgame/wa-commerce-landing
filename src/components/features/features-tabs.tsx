@@ -1,14 +1,14 @@
 "use client";
 
 import { FeatureDetails } from "@/components/features/feature-details";
-import type { Feature } from "@/components/features/features";
+import { features } from "@/components/features/features";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 
 type Props = {
-  features: Feature[];
+  features: (typeof features)[number][];
   className?: string;
 };
 
@@ -30,8 +30,8 @@ export function FeaturesTabs({ features, className }: Props) {
       </TabsList>
       {features.map((feature) => (
         <TabsContent key={feature.title} value={feature.title}>
-          <div className="bg-card flex w-full justify-center rounded-lg border p-8 pb-0">
-            <Image src={feature.image} alt="App Image" width={304} height={445} />
+            <div className="bg-card flex w-full justify-center rounded-lg border p-8 pb-0">
+              {/* <Image src={feature.image} alt="App Image" width={304} height={445} /> */}
           </div>
         </TabsContent>
       ))}

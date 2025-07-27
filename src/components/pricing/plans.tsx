@@ -1,6 +1,5 @@
 "use client";
 
-import { PlanSelect, plans } from "@/components/pricing/plan-select";
 import { Button } from "@/components/ui/button";
 import { CheckIcon } from "lucide-react";
 import Link from "next/link";
@@ -14,7 +13,7 @@ const features = [
 ];
 
 export function Plans() {
-  const [selectedPriceId, setSelectedPriceId] = useState(plans[0].priceId);
+  // const [selectedPriceId, setSelectedPriceId] = useState(plans[0].priceId);
 
   return (
     <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center">
@@ -29,9 +28,9 @@ export function Plans() {
           </li>
         ))}
       </ul>
-      <PlanSelect value={selectedPriceId} onChange={setSelectedPriceId} />
+      {/* <PlanSelect value={selectedPriceId} onChange={setSelectedPriceId} /> */}
       <Button className="mb-8 w-full" size="lg" asChild>
-        <Link href={`/checkout?price_id=${selectedPriceId}`}>Checkout</Link>
+        {/* <Link href={`/checkout?price_id=${selectedPriceId}`}>Checkout</Link> */}
       </Button>
       <div className="text-muted-foreground flex justify-center gap-8 text-sm underline">
         <Link href="/privacy-policy">Privacy Policy</Link>

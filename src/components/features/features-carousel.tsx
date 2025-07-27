@@ -1,13 +1,13 @@
 "use client";
 
-import type { Feature } from "@/components/features/features";
+import type { features } from "@/components/features/features";
 import { FeatureCard } from "@/components/features/feature-card";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 type Props = {
-  features: Feature[];
+  features: (typeof features)[number][];
   className?: string;
 };
 
